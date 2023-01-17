@@ -1,0 +1,36 @@
+@import "variables";
+
+//responsive breakpoints
+
+@mixin desktop(){
+    @media  screen and (max-width: #{$desktop_device}) {
+        @content;   
+    }
+}
+
+
+@mixin tablet(){
+    @media  screen and (max-width: #{$tablet_device}) {
+        @content;   
+    }
+}
+
+
+@mixin mobile(){
+    @media  screen and (max-width: #{$mobile_device}) {
+        @content;   
+    }
+}
+
+
+@mixin extra_small_device(){
+    @media  screen and (max-width: #{$extra_small_device}) {
+        @content;   
+    }
+}
+
+//flexbox
+@mixin flexbox($direction){
+        display: flex;
+        flex-direction: $direction;
+}

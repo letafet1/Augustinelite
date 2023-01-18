@@ -592,6 +592,7 @@ body {
     z-index: 99;
     padding-top: 0px;
     margin-left: 0px;
+     display:none
   }
 }
 .section_end__headtext {

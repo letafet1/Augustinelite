@@ -407,6 +407,10 @@
             row-gap: 5px;
             
         }
+        @include extra_small_device{
+            padding: 20px;
+            
+        }
         
     }
 

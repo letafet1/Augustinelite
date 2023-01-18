@@ -563,15 +563,14 @@
         background-color: #000000;  
           
         @include mobile_device{
-   
+            padding-left: 20px;
             margin-top: 373px;
+            height: 30px;
+            margin-left: 20px;
            
         }   
         @include extra_small_device{
-            padding-left: 20px;
             margin-top: 183px;
-            height: 30px;
-            margin-left: 20px;
         }  
     }
 
@@ -605,7 +604,7 @@
         
     }
     @include extra_small_device{
-        padding-right: 20px;
+        padding-left: 20px;
     }
 
     // .footer__list--container

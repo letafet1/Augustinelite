@@ -471,7 +471,7 @@ body {
   }
 }
 @media screen and (max-width: 575px) {
-  .footer {
+  .section_second--container {
     padding: 20px;
   }
 }

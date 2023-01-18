@@ -653,6 +653,11 @@ body {
     margin-left: 20px;
   }
 }
+@media screen and (max-width: 767px) {
+  .section_end__botton--container {
+    margin-top: 373px;
+  }
+}
 .section_end__botton--container:hover {
   opacity: 0.8;
 }

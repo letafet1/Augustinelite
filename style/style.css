@@ -645,6 +645,13 @@ body {
   height: 62px;
   background-color: #000000;
 }
+
+@media screen and (max-width: 767px) {
+  .section_end__botton--container {
+    margin-top: 373px;
+  }
+}
+
 @media screen and (max-width: 575px) {
   .section_end__botton--container {
     padding-left: 20px;
@@ -653,11 +660,7 @@ body {
     margin-left: 20px;
   }
 }
-@media screen and (max-width: 767px) {
-  .section_end__botton--container {
-    margin-top: 373px;
-  }
-}
+
 .section_end__botton--container:hover {
   opacity: 0.8;
 }

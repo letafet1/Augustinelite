@@ -561,17 +561,18 @@
         border: none;
         height: 62px;
         background-color: #000000;  
-        @include extra_small_device{
-            padding-left: 20px;
-            margin-top: 183px;
-            height: 30px;
-            margin-left: 20px;
-        }      
+          
         @include mobile_device{
    
             margin-top: 373px;
            
         }   
+        @include extra_small_device{
+            padding-left: 20px;
+            margin-top: 183px;
+            height: 30px;
+            margin-left: 20px;
+        }  
     }
 
     &__botton--container:hover {

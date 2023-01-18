@@ -501,6 +501,8 @@
         color: white;
         font-size: 24px;
         position: absolute;
+        padding-top: 100px;
+        margin-left: 100px;
         @include extra_small_device{
             padding-left: 20px;
             z-index: 99;
@@ -514,6 +516,9 @@
         font-weight: bold;
         width: 47%;
         letter-spacing: 1px;
+        padding-top: 164px;
+        margin-left: 100px;
+        
         @include extra_small_device{
             font-size: 21px;
             font-weight: bold;
@@ -529,6 +534,8 @@
         margin-top: 30px;
         width: 20%;
         height: 42px;
+        margin-left: 100px;
+        margin-top: 324px;
         @include extra_small_device{
             margin-left: 20px;
             padding-left: 20px;
@@ -540,6 +547,8 @@
     }
 
     &__botton--container {
+        margin-left: 100px;
+        margin-top: 401px;
         position: absolute;
         margin-top: 28px;
         width: 136px;

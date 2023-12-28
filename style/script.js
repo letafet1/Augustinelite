@@ -52,7 +52,7 @@ document.querySelector('.btn-again').addEventListener('click', function(){
     document.querySelector('.label-score').textContent=score;
     document.querySelector('.number').textContent='?';
     document.querySelector('.guess').value='';
-    document.querySelector('h1').textContent=Rəqəmi təxmin et!;
+    document.querySelector('h1').textContent='Rəqəmi təxmin et!';
 
     document.querySelector('body').style.backgroundColor= 'black'
     document.querySelector('number').style.width='15rem'

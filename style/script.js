@@ -1,113 +1,59 @@
-html{
-    font-size: 62.5;
-}
+'use strict';
 
-body{
-    font-family: sans-serif;
-    color: beige;
-    background-color: black;
-}
-header{
-    position: relative;
-    height: 35vh;
-    border-bottom: 7px solid seashell;
-}
+let secretNumber= Math.trunc(Math.random()*20)+1;
 
-main{
-    height: 65vh;
-    color: beige;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-.left{
-    width: 52rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  
-
-}
+let score = 20;
+let highscore = 0;
 
 
-.right{
-    width: 52rem;
-    font-size: 2rem;
-}
-.between{
-    font-size: 1.4rem;
-    position: absolute;
-    top: 2rem;
-    right: 5rem;
-}
+const displayMessage = function(message){
+    document.querySelector('.message').textContent = message;
+};
 
+document.querySelector('.btn-check').addEventListener('click',function(){
+    const guess = Number(document.querySelector('.guess').value);
+    console.log(guess, typeof guess);
+    console.log(secretNumber, typeof secretNumber);
 
+    if(!guess){
+        displayMessage('Bir rəqəm daxil edin!');
+    }
 
-h1{
-    font-size: 3rem;
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    top: 61%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
+    else if(guess === secretNumber){
+        displayMessage('Təxmininiz doğrudur!');
+        document.querySelector('.number').textContent=secretNumber;
 
-.number{
-    background-color: beige;
-    color: black;
-    font-size: 3rem;
-    width: 9rem;
-    padding: 0rem 0rem;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 50%);
+        document.querySelector('body').style.backgroundColor = '#395e39';
+        document.querySelector('.number').style.width='30rem';
 
-}
+        document.querySelector('h1').textContent="Səni çox istəyirəm!"
+        document.querySelector('h1').style.color="red"
 
-.btn-again{
-    position: absolute;
-    top: 1rem;
-    left: 2rem;
-}
-.btn-again:hover{
-    background-color: blanchedalmond;
-}
+        if(score>highscore){
+            highscore=score;
+            document.querySelector('.label-highscore').textContent=highscore;
+        }
+    }
 
-.guess{
-    background: none;
-    color: beige;
-    border: 4px solid white;
-    font-family: inherit;
-    font-size: 5rem;
-    padding: 1.5rem;
-    width: 7rem;
-    text-align: center;
-    display: block;
-    margin-bottom: 3rem;
-    
-}
+    else if(guess !==secretNumber){
+        if(score>1){
+            displayMessage(guess>secretNumber ? 'Təxminindən aşağıdır!':'Təxminindən yüksəkdir');
+            document 
+        }
+    }
+});
 
-.btn-check{
-    border: none;
-    background-color: beige;
-    color: black;
-    font-size: 2rem;
-    padding: 1rem 2rem;
-    cursor: pointer;
-}
-.btn-check:hover{
-    background-color: blanchedalmond;
-}
+document.querySelector('.btn-again').addEventListener('click', function(){
+    score=20;
+    secretNumber= Math.trunc(Math.random()*20)+1;
 
-.message{
-    margin-bottom: 5rem;
-    height: 3rem;
-}
+    displayMessage('Təxmin edilir...');
 
-.label-score{
-    margin-bottom: 2rem;
+    document.querySelector('.label-score').textContent=score;
+    document.querySelector('.number').textContent='?';
+    document.querySelector('.guess').value='';
 
-}
+    document.querySelector('body').style.backgroundColor= 'black'
+    document.querySelector('number').style.width='15rem'
+
+});
